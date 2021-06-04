@@ -16,6 +16,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         position: [x, y + 1],
+        history: [...state.history, state.position],
       };
     case "DOWN":
       if (y <= 1) {
@@ -29,6 +30,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         position: [x, y - 1],
+        history: [...state.history, state.position],
       };
     case "LEFT":
       if (x <= 1) {
@@ -42,6 +44,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         position: [x - 1, y],
+        history: [...state.history, state.position],
       };
     case "RIGHT":
       if (x >= 10) {
@@ -55,6 +58,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         position: [x + 1, y],
+        history: [...state.history, state.position],
       };
     default:
       return state;

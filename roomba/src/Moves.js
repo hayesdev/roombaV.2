@@ -7,8 +7,8 @@ function Moves() {
     <div>
       <button onClick={up}>up</button>
       <button onClick={down}>down</button>
-      <button onClick={left}>left</button>
       <button onClick={right}>right</button>
+      <button onClick={left}>left</button>
     </div>
   );
 }
