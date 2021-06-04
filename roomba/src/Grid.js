@@ -12,11 +12,9 @@ function Grid() {
             // toString to make comparison work
             position.toString() === `${j},${i}` ? "roomba cell" : "cell"
           }
-          id={[j, i]}
           key={[j, i]}
-        >
-          {i},{j}
-        </div>
+          id={[j, i]}
+        ></div>
       );
     }
   }

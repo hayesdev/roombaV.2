@@ -5,6 +5,7 @@ const AppContext = React.createContext();
 
 const initialState = {
   position: [1, 1],
+  hits: 0,
 };
 
 const AppProvider = ({ children }) => {

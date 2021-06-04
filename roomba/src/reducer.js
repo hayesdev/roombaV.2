@@ -1,11 +1,17 @@
 const reducer = (state, action) => {
   let x = state.position[0];
   let y = state.position[1];
+  const message = "Roomba hit a wall";
+
   switch (action.type) {
     case "UP":
       if (y >= 10) {
-        console.log("Roomba hit a wall");
+        console.log(message);
         y = 9;
+        return {
+          ...state,
+          hits: state.hits + 1,
+        };
       }
       return {
         ...state,
@@ -13,8 +19,12 @@ const reducer = (state, action) => {
       };
     case "DOWN":
       if (y <= 1) {
-        console.log("Roomba hit a wall");
+        console.log(message);
         y = 2;
+        return {
+          ...state,
+          hits: state.hits + 1,
+        };
       }
       return {
         ...state,
@@ -22,8 +32,12 @@ const reducer = (state, action) => {
       };
     case "LEFT":
       if (x <= 1) {
-        console.log("Roomba hit a wall");
+        console.log(message);
         x = 2;
+        return {
+          ...state,
+          hits: state.hits + 1,
+        };
       }
       return {
         ...state,
@@ -31,8 +45,12 @@ const reducer = (state, action) => {
       };
     case "RIGHT":
       if (x >= 10) {
-        console.log("Roomba hit a wall");
+        console.log(message);
         x = 9;
+        return {
+          ...state,
+          hits: state.hits + 1,
+        };
       }
       return {
         ...state,
