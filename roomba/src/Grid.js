@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useGlobalContext } from "./context";
 
 function Grid() {
@@ -10,10 +10,10 @@ function Grid() {
         <div
           className={
             // toString to make comparison work
-            position.toString() === `${i},${j}` ? "roomba cell" : "cell"
+            position.toString() === `${j},${i}` ? "roomba cell" : "cell"
           }
-          id={[i, j]}
-          key={[i, j]}
+          id={[j, i]}
+          key={[j, i]}
         >
           {i},{j}
         </div>
