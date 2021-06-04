@@ -33,6 +33,7 @@ code {
   flex-wrap: wrap;
   width: 500px;
   height: 500px;
+  background-image: url("wood_floor.jpg");
   border: 1px solid black;
 }
 
@@ -48,9 +49,11 @@ code {
   width: 45px;
   height: 45px;
   margin: auto;
-  background-color: green;
+  background-image: url("roomba.jpg");
+  background-size: 180%;
+  background-position: center;
   border-radius: 25px;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
